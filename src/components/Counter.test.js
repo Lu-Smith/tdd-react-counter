@@ -33,7 +33,11 @@ test('it should increase the value correctly when add is clicked twice', () => {
 })
 
 test('it should increase the value correctly when remove is clicked once', () => {
-    throw new Error();
+    render(<Counter initialValue={1}/>);
+    const removeButton = screen.getByText("Remove");
+    userEvent.click(removeButton);
+    const count = screen.queryByText(0);
+    expect(count).toBeVisible();
 })
 
 test('it should increase the value correctly when remove is clicked twice', () => {
