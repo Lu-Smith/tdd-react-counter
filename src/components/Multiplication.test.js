@@ -27,6 +27,14 @@ test('it should increase value correctly when click multiply twice', () => {
     const multiplyButton = screen.getByText("Multiply");
     userEvent.click(multiplyButton);
     userEvent.click(multiplyButton);
-    const count = screen.queryByText(8);
+    const count = screen.queryByText(16);
+    expect(count).toBeVisible();
+});
+
+test('it should decrease value correctly when click divide once', () => {
+    render(<Multiplication initialValue={4} />);
+    const divideButton = screen.getByText("Divide");
+    userEvent.click(divideButton);
+    const count = screen.queryByText(2);
     expect(count).toBeVisible();
 });
