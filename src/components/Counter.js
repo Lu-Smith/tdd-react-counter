@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import "./styles/Counter.css";
 
 
 const Counter = ({initialValue}) => {
@@ -19,13 +20,16 @@ const Counter = ({initialValue}) => {
       };
 
   return (
-    <div>
+    <div className='Counter'>
         <h1>
            Counter
         </h1>
+        <div className='container'>
+        <button onClick={remove}>Remove</button>
         <span>{count}</span>
         <button onClick={add}>Add</button>
-        <button onClick={remove}>Remove</button>
+        </div>
+        
     </div>
   )
 }
