@@ -9,3 +9,17 @@ test('it should have a default initial value of 0', () => {
 test('it should increase the value correctly when add is clicked once', () => {
     throw new Error();
 })
+
+test('it should increase the value correctly when add is clicked twice', () => {
+    throw new Error();
+})
+
+test('it should increase the value correctly when remove is clicked once', () => {
+    throw new Error();
+})
+
+test('it should increase the value correctly when remove is clicked twice', () => {
+    throw new Error();
+})
+
+
