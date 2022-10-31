@@ -9,7 +9,13 @@ const Multiplication = ({initialValue}) => {
     <div className='Multiplication'>
         <h1>Multiplication x 2</h1>
         <div className='container'>
-        <span>{initialValue}</span>
+            <div>
+               <input type="number" value={initialValue ?? 0}/>
+               <span>X 2</span>
+            </div>
+            <div>
+               <span>{initialValue ?? 0}</span> 
+            </div>
         </div>
     </div>
   )
