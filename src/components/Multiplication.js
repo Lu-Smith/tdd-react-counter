@@ -1,10 +1,18 @@
-import React from 'react'
+import {useState} from 'react';
 
 const Multiplication = ({initialValue}) => {
+
+    const [count, setCount] = useState(initialValue ?? 0);
+
+    const multiply = () => {
+      setCount(count * count);
+    };
+
   return (
     <div>
         <h1>Multiplication</h1>
-        <span>{initialValue ?? 0}</span>
+        <span>{count}</span>
+        <button onClick={multiply}>Multiply</button>
     </div>
   )
 }
