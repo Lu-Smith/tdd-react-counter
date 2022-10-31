@@ -38,3 +38,11 @@ test('it should decrease value correctly when click divide once', () => {
     const count = screen.queryByText(1);
     expect(count).toBeVisible();
 });
+
+test('it should decrease value correctly when click divide twice', () => {
+    render(<Multiplication initialValue={16} />);
+    const divideButton = screen.getByText("Divide");
+    userEvent.click(divideButton);
+    const count = screen.queryByText(1);
+    expect(count).toBeVisible();
+});
