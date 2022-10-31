@@ -58,7 +58,14 @@ test('it should not allowed a negative number when the initial value is 0 and re
 })
 
 test('it should not allowed a negative number when the initial value is 2 and remove is clicked 4 times', () => {
-    throw new Error();
+    render(<Counter initialValue={2}/>);
+    const removeButton = screen.getByText("Remove");
+    userEvent.click(removeButton);
+    userEvent.click(removeButton);
+    userEvent.click(removeButton);
+    userEvent.click(removeButton);
+    const count = screen.queryByText(0);
+    expect(count).toBeVisible();
 })
 
 
