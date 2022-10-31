@@ -17,7 +17,7 @@ test('it should have a default initial value of 0', () => {
 
 test('it should increase the value correctly when add is clicked once', () => {
     render(<Counter initialValue={1}/>);
-    const addButton = screen.qetByText("Add");
+    const addButton = screen.getByText("Add");
     userEvent.click(addButton);
     const count = screen.queryByText(2);
     expect(count).toBeVisible();
