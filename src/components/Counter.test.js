@@ -12,6 +12,7 @@ test('it should have a default initial value of 0', () => {
     render(<Counter />);
     const count = screen.queryByText(0);
     expect(count).toBeVisible();
+});
 
 test('it should increase the value correctly when add is clicked once', () => {
     throw new Error();
