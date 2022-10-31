@@ -3,6 +3,8 @@ import App from './App';
 
 test('it should have a correct title', () => {
   render(<App />);
-  const text = screen.getByText("Counter");
-  expect(text).toBeInTheDocument();
+  const titleCounter = screen.getByText("Counter");
+  expect(titleCounter).toBeInTheDocument();
+  const titleMultiplication = screen.getByText("Multiplication");
+  expect(titleMultiplication).toBeInTheDocument();
 });
