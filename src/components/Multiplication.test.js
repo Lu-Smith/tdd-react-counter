@@ -14,10 +14,19 @@ test('it should have a default value set to 0', () => {
     expect(count).toBeVisible();
 });
 
-test('it should increase value correctly when click multiply', () => {
+test('it should increase value correctly when click multiply once', () => {
     render(<Multiplication initialValue={2} />);
     const multiplyButton = screen.getByText("Multiply");
     userEvent.click(multiplyButton);
     const count = screen.queryByText(4);
+    expect(count).toBeVisible();
+});
+
+test('it should increase value correctly when click multiply twice', () => {
+    render(<Multiplication initialValue={2} />);
+    const multiplyButton = screen.getByText("Multiply");
+    userEvent.click(multiplyButton);
+    userEvent.click(multiplyButton);
+    const count = screen.queryByText(8);
     expect(count).toBeVisible();
 });
