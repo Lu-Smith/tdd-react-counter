@@ -11,6 +11,10 @@ const Multiplication = ({initialValue}) => {
         setCount(number * 2);
     };
 
+    const divide = () => {
+        setCount(number / 2);
+    };
+
 
   return (
     <div className='Multiplication'>
@@ -21,6 +25,7 @@ const Multiplication = ({initialValue}) => {
                <span>X 2</span>
             </div>
             <div>
+               <button onClick={divide}>Divide</button>
                <span>{count}</span>
                <button onClick={multiply}>Multiply</button>
             </div>

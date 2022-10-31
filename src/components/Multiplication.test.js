@@ -22,3 +22,13 @@ test('it should increase value by 2 after click multiply once', () => {
     expect(count).toBeVisible();
 });
 
+test('it should decrease value by 2 after click divide once', () => {
+    render(<Multiplication initialValue={16} />);
+    const divideButton = screen.getByText("Divide");
+    userEvent.click(divideButton);
+    const count = screen.queryByText(8);
+    expect(count).toBeVisible();
+});
+
+
+
