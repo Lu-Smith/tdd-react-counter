@@ -7,7 +7,7 @@ const Counter = ({initialValue}) => {
         <h1>
            Counter
         </h1>
-        <span>{initialValue}</span>
+        <span>{initialValue ?? 0}</span>
 
     </div>
   )
