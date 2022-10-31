@@ -3,9 +3,14 @@ import {useState} from 'react';
 
 const Counter = ({initialValue}) => {
     const [count, setCount] = useState(initialValue ?? 0);
+
     const add = () => {
       setCount((prevCount)=>prevCount + 1);
     };
+
+    const remove = () => {
+        setCount((prevCount)=>prevCount - 1);
+      };
 
   return (
     <div>
@@ -14,6 +19,7 @@ const Counter = ({initialValue}) => {
         </h1>
         <span>{count}</span>
         <button onClick={add}>Add</button>
+        <button onClick={remove}>Remove</button>
     </div>
   )
 }
