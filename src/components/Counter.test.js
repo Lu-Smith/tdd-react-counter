@@ -22,4 +22,9 @@ test('it should increase the value correctly when remove is clicked twice', () =
     throw new Error();
 })
 
+test('it should not allowe a negative number when the initial value is 0 and remove is clicked', () => {
+    throw new Error();
+})
+
+
 
