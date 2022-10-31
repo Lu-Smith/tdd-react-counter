@@ -1,8 +1,11 @@
 import React from 'react'
 
-const Multiplication = () => {
+const Multiplication = ({initialValue}) => {
   return (
-    <div>Multiplication</div>
+    <div>
+        <h1>Multiplication</h1>
+        <span>{initialValue}</span>
+    </div>
   )
 }
 
