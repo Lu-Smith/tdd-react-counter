@@ -1,12 +1,14 @@
 import React from 'react'
 
 
-const Counter = () => {
+const Counter = ({initialValue}) => {
   return (
     <div>
         <h1>
            Counter
         </h1>
+        <span>{initialValue}</span>
+
     </div>
   )
 }
