@@ -1,0 +1,21 @@
+.Multiplication {
+    background-color: black;
+    padding: 20px;
+
+}
+
+.container {
+    margin: 50px 0;
+    font-size: 30px;
+}
+
+button {
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 120px;
+}
+
+span {
+    padding: 0 15px;
+}
