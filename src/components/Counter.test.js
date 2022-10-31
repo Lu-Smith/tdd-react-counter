@@ -1,5 +1,6 @@
 import {render, screen} from "@testing-library/react";
 import Counter from "./Counter";
+import userEvent from "@testing-library/user-event";
 
 
 test('it should have the correct initial value when set to 7', () => {
@@ -15,7 +16,11 @@ test('it should have a default initial value of 0', () => {
 });
 
 test('it should increase the value correctly when add is clicked once', () => {
-    throw new Error();
+    render(<Counter initialValue={1}/>);
+    const addButton = screen.qetByText("Add");
+    userEvent.click(addButton);
+    const count = screen.queryByText(2);
+    expect(count).toBeVisible();
 })
 
 test('it should increase the value correctly when add is clicked twice', () => {
