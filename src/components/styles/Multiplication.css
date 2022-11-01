@@ -9,6 +9,14 @@
     font-size: 30px;
 }
 
+input {
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 120px;
+    margin-bottom: 30px;
+}
+
 button {
     padding: 10px 15px;
     border-radius: 10px;
