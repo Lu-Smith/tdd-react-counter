@@ -22,7 +22,7 @@ const Multiplication = ({initialValue}) => {
         <div className='container'>
             <div>
                <input type="number" value={number} onChange={event => setNumber(event.target.value)}/>
-               <span>X 2</span>
+               <span>x 2</span>
             </div>
             <div>
                <button onClick={divide}>Divide</button>
